@@ -1,0 +1,35 @@
+@import 'nib';
+
+global-reset();
+
+@import './variables';
+@import './mixins';
+@import './reset';
+
+html {
+	height: 100%;
+	box-sizing: border-box;
+	background: #141E30;
+	background: linear-gradient(to top, $COLOR_GRAY, #fff);
+	font-family: Helvetica, sans-serif;
+	overflow: hidden;
+
+	+desktop() {
+		font-size: 16px;
+	}
+
+	+mobile() {
+		font-size: 14px;
+	}
+}
+
+body {
+	height: 100%;
+}
+
+#bowser-online-container {
+	height: 100%;
+	width: 100%;
+
+	@import './components/App';
+}

@@ -1,0 +1,84 @@
+[data-component='App'] {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+
+	+desktop() {
+		padding: 40px 80px;
+	}
+
+	+mobile() {
+		padding: 20px 20px;
+	}
+
+	> .header {
+		> h1 {
+			margin-bottom: 2rem;
+			font-size: 1.5rem;
+			font-weight: 400;
+			color: $COLOR_GRAY;
+
+			> a {
+				text-decoration: none;
+				color: inherit;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	> input {
+		margin-bottom: 2rem;
+		width: 100%;
+		height: 50px;
+		padding: 0 20px;
+		border: 1px solid $COLOR_RED;
+		border-radius: 4px;
+		background-color: #fff;
+		font-size: 1rem;
+		color: #555;
+
+		+placeholder() {
+			color: #bbb;
+		}
+	}
+
+	> .result {
+		padding: 20px;
+		border-radius: 4px;
+		background-color: rgba(#fff, 0.5);
+
+		> .section {
+			margin-bottom: 2rem;
+
+			> h3 {
+				margin-bottom: 1rem;
+				font-size: 1.15rem;
+				font-weight: 400;
+				color: $COLOR_RED;
+			}
+
+			> .line {
+				margin-bottom: 0.5rem;
+				margin-left: 1rem;
+				display: flex;
+				flex-direction: row;
+				font-size: 1rem;
+
+				> .item {
+					flex: 0 0 auto;
+					min-width: 70px;
+					color: $COLOR_GRAY;
+				}
+
+				> .value {
+					flex: 0 0 auto;
+					color: #555;
+				}
+			}
+		}
+	}
+}
