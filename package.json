@@ -19,10 +19,10 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
-    "@babel/plugin-transform-runtime": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "babel-plugin-jsx-control-statements": "^4.0.0",
     "babelify": "^10.0.0",
@@ -34,7 +34,7 @@
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-control-statements": "^2.2.1",
     "eslint-plugin-react": "^7.13.0",
-    "gulp": "^4.0.1",
+    "gulp": "^4.0.2",
     "gulp-eslint": "^5.0.0",
     "gulp-if": "^2.0.2",
     "gulp-plumber": "^1.2.1",
