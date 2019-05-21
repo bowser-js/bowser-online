@@ -1,5 +1,8 @@
 import React from 'react';
-import bowser from 'bowser';
+// Instead of including bowser as a package.json dependency, use the latest
+// version retrieved from a CDN and loaded via <script> tag.
+// import bowser from 'bowser';
+const bowser = window.bowser;
 
 class App extends React.Component
 {
