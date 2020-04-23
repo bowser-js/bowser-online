@@ -33,7 +33,7 @@ const nib = require('nib');
 const browserSync = require('browser-sync');
 
 const PKG = require('./package.json');
-const OUTPUT_DIR = 'out';
+const OUTPUT_DIR = 'docs';
 
 function logError(error)
 {

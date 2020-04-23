@@ -17,7 +17,7 @@ Build the site:
 $ npm run build
 ```
 
-It generates the `out/` folder with the HTML, JS and CSS files that should be deployed in your web server.
+It generates the `docs/` folder with the HTML, JS and CSS files that should be deployed in your web server.
 
 
 ## Development
