@@ -33,7 +33,14 @@ const nib = require('nib');
 const browserSync = require('browser-sync');
 
 const PKG = require('./package.json');
-const OUTPUT_DIR = 'docs';
+
+function getOutputDir()
+{
+	if (process.env.NODE_ENV === 'production')
+		return './docs';
+	else
+		return './live';
+}
 
 function logError(error)
 {
@@ -91,7 +98,7 @@ function bundle(options)
 			.pipe(gulpif(process.env.NODE_ENV === 'production',
 				uglify()
 			))
-			.pipe(gulp.dest(OUTPUT_DIR));
+			.pipe(gulp.dest(getOutputDir()));
 	}
 
 	return rebundle();
@@ -111,7 +118,7 @@ gulp.task('env:development', (done) =>
 	done();
 });
 
-gulp.task('clean', () => del(OUTPUT_DIR, { force: true }));
+gulp.task('clean', () => del(getOutputDir(), { force: true }));
 
 gulp.task('lint', () =>
 {
@@ -139,14 +146,14 @@ gulp.task('css', () =>
 			}))
 		.on('error', logError)
 		.pipe(rename(`${PKG.name}.css`))
-		.pipe(gulp.dest(OUTPUT_DIR))
+		.pipe(gulp.dest(getOutputDir()))
 		.pipe(touch());
 });
 
 gulp.task('html', () =>
 {
 	return gulp.src('index.html')
-		.pipe(gulp.dest(OUTPUT_DIR));
+		.pipe(gulp.dest(getOutputDir()));
 });
 
 gulp.task('bundle', () =>
@@ -165,10 +172,10 @@ gulp.task('livebrowser', (done) =>
 		{
 			server :
 			{
-				baseDir : OUTPUT_DIR
+				baseDir : getOutputDir()
 			},
 			ghostMode : false,
-			files     : path.join(OUTPUT_DIR, '**', '*')
+			files     : path.join(getOutputDir(), '**', '*')
 		});
 
 	done();
