@@ -7,12 +7,13 @@ global-reset();
 @import './reset';
 
 html {
-	height: 100%;
+	min-height: 100%;
 	box-sizing: border-box;
-	background: #141E30;
-	background: linear-gradient(to top, $COLOR_GRAY, #fff);
-	font-family: Helvetica, sans-serif;
-	overflow: hidden;
+	background: $BG_PRIMARY;
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	color: $TEXT_PRIMARY;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
 	+desktop() {
 		font-size: 16px;
@@ -24,12 +25,10 @@ html {
 }
 
 body {
-	height: 100%;
+	min-height: 100%;
 }
 
 #bowser-online-container {
-	height: 100%;
-	width: 100%;
 
 	@import './components/App';
 }

@@ -1,6 +1,6 @@
 # bowser online
 
-A website to test [bowser](https://github.com/lancedikson/bowser).
+A website to test [bowser](https://github.com/bowser-js/bowser).
 
 
 ## Usage
